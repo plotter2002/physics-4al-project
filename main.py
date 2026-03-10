@@ -20,7 +20,7 @@ dist_cm = cardboard[:,1]
 time_s = time_millis/1000
 
 dist_m=dist_cm/100
-# plt.scatter(time_s,dist_m)
+plt.scatter(time_s,dist_m)
 
 # Add axes labels
 # Create a variable that starts from 0 and ends at the size of the array
@@ -68,6 +68,7 @@ quad_err = np.sqrt(cov_quad[0,0])
 plt.xlabel("Time in milliseconds")
 plt.ylabel("Distance in meters")
 plt.title("Position vs time ultrasonic sensor")
+plt.show()
 print(quad_err)
 #Title 
 angle_rad = np.arcsin(2*coeff_quad[0]/-9.8)
